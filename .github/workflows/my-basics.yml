@@ -20,6 +20,7 @@ jobs:
     
   my_deploy:
     runs-on: ubuntu-lates
+    needs: [my_testing]
     
     steps:
     - name: Ptint Hello Massage in Deploy

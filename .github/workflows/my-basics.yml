@@ -1,0 +1,27 @@
+#--------------------------------------
+#GitHub Action Part-1 Basics
+#
+#Copyleft (c) by Vlad Obizyuk 2022
+#--------------------------------------
+name: My-GitHubActions-Basics
+
+on: 
+  push:
+    branches: 
+      -master
+
+jobs:
+  my_testing:
+    runs-on: ubuntu-lates
+    
+    steps:
+      - name: Ptint Hello Massage
+        run : echo "Hello World from Testing job" 
+    
+  my_deploy:
+    runs-on: ubuntu-lates
+    
+    steps:
+      - name: Ptint Hello Massage
+        run : echo "Hello World from Deploy job"
+  

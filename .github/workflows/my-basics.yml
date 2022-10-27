@@ -8,20 +8,21 @@ name: My-GitHubActions-Basics
 on: 
   push:
     branches: 
-      -master
+      - main
 
 jobs:
   my_testing:
     runs-on: ubuntu-lates
     
     steps:
-      - name: Ptint Hello Massage
-        run : echo "Hello World from Testing job" 
+    - name: Ptint Hello Massage in Testing
+      run : echo "Hello World from Testing job" 
     
   my_deploy:
     runs-on: ubuntu-lates
+    needs: [my_testing]
     
     steps:
-      - name: Ptint Hello Massage
-        run : echo "Hello World from Deploy job"
+    - name: Ptint Hello Massage in Deploy
+      run : echo "Hello World from Deploy job"
   
